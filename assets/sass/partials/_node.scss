@@ -32,7 +32,7 @@
 .page-node.node-type-hr-dataset,
 .page-node.node-type-hr-indicator,
 .page-node.node-type-hr-contact,
-.page-node.node-type-hr-assessment,
+.page-node.node-type-reg-assessment,
 .page-node.node-type-hr-office,
 .page-node.node-type-hr-disaster:not(.hr-group-context),
 .page-node.node-type-hr-funding,
@@ -52,7 +52,7 @@
 .node-full.node-hr-dataset,
 .node-full.node-hr-indicator,
 .node-full.node-hr-contact,
-.node-full.node-hr-assessment,
+.node-full.node-reg-assessment,
 .node-full.node-hr-office,
 .page-node.node-type-hr-disaster:not(.hr-group-context) .node-full.node-hr-disaster,
 .node-full.node-hr-funding,
@@ -189,7 +189,7 @@
     }
   }
 
-  &.node-hr-assessment .container-fluid {
+  &.node-reg-assessment .container-fluid {
     border-right: 5px solid $p-main;
     box-shadow: none;
 
@@ -309,7 +309,7 @@
     }
   }
 
-  &.node-hr-assessment {
+  &.node-reg-assessment {
     h2 {
       background: url('../images/assessment-tb.svg') left top no-repeat;
       a {
@@ -664,7 +664,7 @@
 .node-full.node-hr-dataset .container-fluid .row,
 .node-full.node-hr-indicator .container-fluid .row,
 .node-full.node-hr-contact .container-fluid .row,
-.node-full.node-hr-assessment .container-fluid .row,
+.node-full.node-reg-assessment .container-fluid .row,
 .node-full.node-hr-office .container-fluid .row,
 .page-node.node-type-hr-disaster:not(.hr-group-context) .node-full.node-hr-disaster .container-fluid .row,
 .node-full.node-hr-funding .container-fluid .row,
@@ -682,7 +682,7 @@
 .node-full.node-hr-dataset .container-fluid .row .radix-layouts-sidebar,
 .node-full.node-hr-indicator .container-fluid .row .radix-layouts-sidebar,
 .node-full.node-hr-contact .container-fluid .row .radix-layouts-sidebar,
-.node-full.node-hr-assessment .container-fluid .row .radix-layouts-sidebar,
+.node-full.node-reg-assessment .container-fluid .row .radix-layouts-sidebar,
 .node-full.node-hr-office .container-fluid .row .radix-layouts-sidebar,
 .page-node.node-type-hr-disaster:not(.hr-group-context) .node-full.node-hr-disaster .container-fluid .row .radix-layouts-sidebar,
 .node-full.node-hr-funding .container-fluid .row .radix-layouts-sidebar,
