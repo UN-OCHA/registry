@@ -1,0 +1,176 @@
+.table-responsive .table-bordered {
+	border: none!important;
+}
+
+.table-responsive .table-striped tr {
+	background: none!important;
+}
+
+.table-responsive {
+	border: none!important;
+
+	tr {
+		border: none;
+		border-bottom: 1px solid $border-grey !important;
+	}
+}
+
+th {
+	background: $p-comp-variant;
+	color: $p-main;
+	text-transform: uppercase;
+	border: none!important;
+	border-bottom: 1px solid $p-main!important;
+	padding: 45px 10px 10px 10px!important;
+	font-size: 12px;
+}
+
+td {
+	background: white;
+	border: 0!important;
+}
+
+table {
+	table-layout: fixed;
+  word-wrap: break-word;
+
+	a {
+		font-weight: normal!important;
+		color: $p-main!important;
+		font-style: italic;
+		border-bottom: 1px solid $p-comp;
+
+		&:hover, &:focus {
+			color: $p-comp!important;
+			border-color: $p-comp;
+			text-decoration: none;
+		}
+	}
+
+	.file-icon {
+		display: none;
+	}
+
+	p {
+		margin: 0
+	}
+
+	.td-section {
+		margin-bottom: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.tabledrag-processed {
+	table-layout: auto;
+
+	tr {
+		position: relative;
+	}
+
+	.field-multiple-drag {
+		position: absolute;
+		left: 0;
+		top: 28px;
+		padding: 0!important;
+
+		&:before {
+			content: none;
+		}
+
+		a.tabledrag-handle {
+			display: block;
+			margin: 0;
+			padding: 0;
+			float: none;
+			border-bottom: none;
+		}
+
+		.handle {
+			position: relative;
+			z-index: 1;
+			width: 22px;
+			height: 22px;
+			background-position: 4px 5px;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	td {
+		padding-left: 32px!important;
+		padding-top: 24px!important;
+
+		&:before {
+			width: auto;
+		}
+
+		.form-required {
+			position: absolute;
+			top: 4px;
+			right: 4px;
+		}
+	}
+
+	.chosen-container {
+		display: block!important;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.table-responsive {
+		tr  {
+			border: none!important;
+		}
+	}
+
+	td {
+		border-bottom: 1px solid $border-grey !important;
+		padding: 15px 10px!important;
+
+		.file a {
+			max-width: 180px;
+	    display: inline-block;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+		}
+	}
+
+	.views-field-field-locations, .views-field-field-asst-date {
+		width: 15%;
+	}
+
+	.link-field-column {
+    float: left;
+    width: 48%;
+    padding-right: 8px;
+	}
+
+	.tabledrag-processed {
+		.field-multiple-drag {
+			position: relative;
+			left: auto;
+			top: auto;
+			padding: 8px!important;
+		}
+
+		td {
+			padding: 8px!important;
+
+			.form-required {
+				position: relative;
+				top: auto;
+				right: auto;
+			}
+		}
+
+		.chosen-container {
+			display: inline-block!important;
+		}
+	}
+}

@@ -1,0 +1,236 @@
+// Styles for search sidebars and results.
+
+#sidebar-first {
+  .block-facetapi {
+    padding: 0;
+    background: white;
+    border-bottom: 1px solid $border-grey;
+    margin: 0 15px;
+
+    h2 {
+      color: black;
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      padding: 15px 28px 15px 10px;
+      color: $p-main;
+      font-size: 14px;
+      line-height: 1.3;
+      @extend .icon-arrow-down;
+
+      &:before {
+        font-family: 'unocha-icons' !important;
+        line-height: 1;
+        position: absolute;
+        right: 10px;
+        font-weight: bold;
+        margin-top: 2px;
+      }
+
+      &:hover, &:focus {
+        background-color: $p-comp-variant;
+      }
+
+      &.opened {
+        @extend .icon-arrow-up;
+        background-color: $p-comp-variant;
+      }
+    }
+
+    .content {
+      padding: 0 10px 5px 10px;
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+
+      li {
+        position: relative;
+        list-style: none;
+        margin: 10px 0;
+        line-height: 1;
+
+        a {
+          color: $p-main;
+          display: block;
+          line-height: 1;
+          position: relative;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $border-grey;
+            margin-right: 5px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+          }
+
+          &:hover {
+            text-decoration: none;
+            color: $p-dark-text;
+          }
+
+          &.facetapi-active {
+            font-size: 0;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 0 5px 0 0;
+            float: left;
+          }
+
+          &.facetapi-inactive {
+            padding-left: 20px;
+          }
+
+          &.facetapi-active, &.facetapi-inactive:hover, &.facetapi-inactive:focus {
+            @extend .icon-check;
+
+            &:before {
+              font-family: 'unocha-icons' !important;
+              line-height: 1;
+              font-weight: bold;
+              color: $p-comp;
+              position: absolute;
+              left: 1px;
+              font-size: 13px;
+            }
+
+            &:after {
+              border-color: $p-comp;
+            }
+          }
+        }
+
+        .item-list {
+          padding-left: 20px;
+
+          a.facetapi-inactive {
+            &:after {
+              top: 1px
+            }
+          }
+        }
+
+        .facetapi-limit-link {
+          padding: 15px 20px;
+        }
+      }
+    }
+  }
+
+  .current-search-item-results {
+    margin-right: 62px;
+  }
+
+  .current-search-filter {
+    font-weight: bold;
+  }
+
+  .current-reset-filter {
+
+    a {
+      position: relative;
+      padding-left: 15px;
+      color: $p-dark-text;
+
+      @extend .icon-cancel;
+
+      &:before {
+        font-family: 'unocha-icons' !important;
+        line-height: 1;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 2px;
+      }
+
+      &:after {
+        content: "reset all";
+        font-size: 12px;
+      }
+
+      &:hover, &:focus {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    span {
+      position: absolute;
+      left: -9999999px;
+    }
+
+    i {
+      display: none;
+    }
+  }
+
+  .current-search-item-reset {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    height: 16px;
+    width: 56px;
+    overflow: hidden;
+  }
+
+  .current-selected-item {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+
+    li {
+      margin: 5px 0 0 0;
+
+      a {
+        font-size: 0;
+        @extend .icon-cancel;
+
+        &:hover, &:focus {
+          text-decoration: none;
+          color: white;
+        }
+
+        &:before {
+          font-size: 13px;
+          font-family: 'unocha-icons' !important;
+          line-height: 1;
+          font-weight: bold;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+
+  .block-current-search {
+    padding: 0;
+    margin: 0 15px;
+    background: $p-comp;
+    color: $p-dark-text;
+
+    .content {
+      padding: 15px 10px;
+      font-size: 12px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#block-current-search-hr-current-search {
+
+  h2 {
+    display: none;
+  }
+
+}
