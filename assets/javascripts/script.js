@@ -10,7 +10,7 @@
 		$(window).resize();
 
 		//facets
-		$("#sidebar-first .block.block-facetapi h2").live("click", function() {
+		$("#sidebar-first .block.block-facetapi").on("click", "h2", function() {
 			$(this).toggleClass('opened').next('.content').slideToggle('fast');
 		});
 		if($("#sidebar-first .block.block-current-search .content .current-search-item-reset").length > 0) {
