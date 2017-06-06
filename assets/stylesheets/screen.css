@@ -3248,6 +3248,17 @@ label { display: block; }
 
 form .table-responsive { overflow-x: inherit; }
 
+table.ui-datepicker-calendar { display: table !important; }
+table.ui-datepicker-calendar thead { display: table-header-group !important; }
+table.ui-datepicker-calendar thead tr { position: static !important; }
+table.ui-datepicker-calendar tbody { display: table-row-group !important; }
+table.ui-datepicker-calendar tr { display: table-row !important; }
+table.ui-datepicker-calendar th, table.ui-datepicker-calendar td { display: table-cell !important; }
+table.ui-datepicker-calendar th { padding: 5px 1px !important; border: none; background: none; color: #333333; }
+table.ui-datepicker-calendar td { padding: 1px !important; border: none !important; }
+table.ui-datepicker-calendar td a { text-align: center; font-style: normal; }
+table.ui-datepicker-calendar td a:hover, table.ui-datepicker-calendar td a:focus { color: #333333; }
+
 div.region-top div.block { display: inline-block; }
 
 #sidebar-first { margin-bottom: 15px; padding: 0; }

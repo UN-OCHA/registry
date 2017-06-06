@@ -28,3 +28,49 @@ form .table-responsive {
   overflow-x: inherit;
 }
 
+// Datepicker
+table.ui-datepicker-calendar {
+  display: table !important;
+
+  thead {
+    display: table-header-group !important;
+
+    tr {
+      position: static !important;
+    }
+  }
+
+  tbody {
+    display: table-row-group !important;
+  }
+
+  tr {
+    display: table-row !important;
+  }
+
+  th, td {
+    display: table-cell !important;
+  }
+
+  th {
+    padding: 5px 1px !important;
+    border: none;
+    background: none;
+    color: $text-color;
+  }
+
+  td {
+    padding: 1px !important;
+    border: none !important;
+
+    a {
+      text-align: center;
+      font-style: normal;
+
+      &:hover, &:focus {
+        color: $text-color;
+      }
+    }
+  }
+}
+
