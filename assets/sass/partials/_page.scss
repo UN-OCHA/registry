@@ -5,7 +5,7 @@
 @import "compass/utilities/sprites";
 @import "footer-logos/*.png";
 
-@include sticky-footer(210px);
+@include sticky-footer(120px);
 @include all-footer-logos-sprites;
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
@@ -51,13 +51,17 @@ a {
   color: $p-main;
   word-wrap: break-word;
 
-  &:hover {
+  &:hover, &:hover {
     color: darken($p-main, 10%);
   }
 
   .region-content & {
-    color: $p-comp;
-    font-weight: bold;
+    border-bottom: 1px solid $p-comp;
+
+    &:hover, &:hover {
+      text-decoration: none;
+      color: $p-comp;
+    }
   }
 
   &.btn {
@@ -66,7 +70,7 @@ a {
       color: #333;
     }
   }
-  
+
   #footer-third & {
     color: $p-comp-variant;
     border-bottom: 1px solid $p-comp;
@@ -236,13 +240,13 @@ body div.messages {
   }
 }
 
-.footer-logos-hdx { 
+.footer-logos-hdx {
   background-image: url('../images/footer-logos/hdx.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.footer-logos-hid { 
+.footer-logos-hid {
   background-image: url('../images/footer-logos/hid.png');
   background-repeat: no-repeat;
   background-position: 0 0;

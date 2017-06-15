@@ -135,7 +135,7 @@
     box-shadow: none;
   }
 
-  .block:not(.block-locale) {
+  .block:not(#block-reg-assessments-reg-assessments-login) {
     position: relative;
 
     &:before {

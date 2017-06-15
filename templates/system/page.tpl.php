@@ -20,7 +20,7 @@
             <i class="fa fa-caret-down" aria-hidden="true"></i>
           </button>
           <ul class="cd-hri-dropdown-menu dropdown-menu" role="menu" id="cd-hri-related-platforms" aria-hidden="true" aria-labelledby="cd-hri-related-platforms-toggle">
-            <li><a href="https://fts.unocha.org/">Financial Tracking Services</a></li>
+            <li><a href="https://fts.unocha.org/">Financial Tracking Service</a></li>
             <li><a href="https://humdata.org/">Humanitarian Data Exchange</a></li>
             <li><a href="https://humanitarian.id/">Humanitarian ID</a></li>
             <li><a href="https://reliefweb.int/">ReliefWeb</a></li>
@@ -42,18 +42,20 @@
         <div class="cd-hri-site-header__search">
           <?php print render($page['branding']); ?>
         </div>
-        <div class="cd-hri-dropdown">
-          <!-- <button type="button" id="cd-hri-nav-toggle" class="cd-hri-site-header__nav-toggle" data-toggle="dropdown">
-            <span class="cd-hri-site-header__nav-toggle-inner" aria-hidden="true">
-            </span>
-            <span class="sr-only"><?php print t('Main menu') ?></span>
-          </button> -->
-          <nav role="navigation" class="cd-hri-site-header__nav dropdown-menu" aria-labelledby="cd-hri-nav-toggle">
-            <ul class="cd-hri-nav cd-hri-nav--primary">
-              <?php print render($main_menu_dropdown); ?>
-            </ul>
-          </nav>
-        </div>
+        <?php if($main_menu_dropdown): ?>
+          <div class="cd-hri-dropdown">
+            <button type="button" id="cd-hri-nav-toggle" class="cd-hri-site-header__nav-toggle" data-toggle="dropdown">
+              <span class="cd-hri-site-header__nav-toggle-inner" aria-hidden="true">
+              </span>
+              <span class="sr-only"><?php print t('Main menu') ?></span>
+            </button>
+            <nav role="navigation" class="cd-hri-site-header__nav dropdown-menu" aria-labelledby="cd-hri-nav-toggle">
+              <ul class="cd-hri-nav cd-hri-nav--primary">
+                <?php print render($main_menu_dropdown); ?>
+              </ul>
+            </nav>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </header>
@@ -65,7 +67,7 @@
     <?php endif; ?>
   </div>
 
-  <div id="main-wrapper">
+  <div id="main-content">
     <div id="main" class="main">
       <div class="container">
         <?php if ($messages): ?>
@@ -114,7 +116,7 @@
   <div id="root_footer"></div>
 </div><!-- #root -->
 
-<footer id="footer" class="footer hidden-print" role="footer">
+<footer id="footer" class="footer hidden-print" role="contentinfo">
   <div class="container">
     <div id="footer-first" class="col-md-5">
       <p><?php print t('Service provided by'); ?><a href="http://www.unocha.org" target="_blank"><img width="200" alt="OCHA logo" src="/sites/all/themes/registry/assets/images/OCHA-logoWhite-22.svg"></a></p>

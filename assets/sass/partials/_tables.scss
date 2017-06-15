@@ -34,6 +34,11 @@ table {
 	table-layout: fixed;
   word-wrap: break-word;
 
+  .field-label-inline .field-label,
+  .field-label-inline .field-items {
+		float: none;
+	}
+
 	a {
 		font-weight: normal!important;
 		color: $p-main!important;
@@ -131,14 +136,7 @@ table {
 	td {
 		border-bottom: 1px solid $border-grey !important;
 		padding: 15px 10px!important;
-
-		.file a {
-			max-width: 180px;
-	    display: inline-block;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
-	    white-space: nowrap;
-		}
+		word-wrap: break-word;
 	}
 
 	.views-field-field-locations, .views-field-field-asst-date {

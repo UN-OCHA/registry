@@ -175,7 +175,7 @@
 
   .current-search-item-reset {
     position: absolute;
-    top: 15px;
+    top: 18px;
     right: 25px;
     height: 16px;
     width: 56px;
@@ -215,6 +215,11 @@
     margin: 0 15px;
     background: $p-comp;
     color: $p-dark-text;
+
+    h2 {
+      padding: 10px 10px 0 10px;
+      color: $p-dark-text;
+    }
 
     .content {
       padding: 15px 10px;
