@@ -16,16 +16,15 @@
     width: 100% !important;
   }
 
-  body {
-    font-family: 'Liberation Sans', sans-serif;
+  #page-header {
+    .title {
+      position: static!important;
+      height: auto!important;
+    }
+    .tabs {
+      display: none;
+    }
   }
- 
-  h1.title {
-    font-family: 'Exo' !important;
-    text-transform: uppercase;
-    color: #3d5d77 !important;
-  }
-
   .table-responsive {
     overflow: visible !important;
   }
@@ -43,7 +42,7 @@
   table thead tr {
     border: 0 !important;
   }
-  
+
   table.table td, table.table th, table.table span,
   table td,
   table th,

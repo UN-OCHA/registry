@@ -24,24 +24,16 @@
 }
 
 // Content types
-.page-node.node-type-hr-operation,
-.page-node.node-type-hr-document,
-.page-node.node-type-hr-infographic,
-.page-node.node-type-hr-news,
-.page-node.node-type-hr-event,
-.page-node.node-type-hr-dataset,
-.page-node.node-type-hr-indicator,
-.page-node.node-type-hr-contact,
+
 .page-node.node-type-reg-assessment,
-.page-node.node-type-hr-office,
-.page-node.node-type-hr-disaster:not(.hr-group-context),
-.page-node.node-type-hr-funding,
-.page-node.node-type-hr-discussion,
-.page-node.node-type-acc-incident,
-.page-node.node-type-hr-toolbox-item,
+.page-assessments,
 .page-user {
   #page-header .title {
-    display: none;
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
   }
 }
 
@@ -86,8 +78,10 @@
             font-weight: bold;
             @include node-sprite(generic);
             color: $p-comp;
-            padding: 20px 20px 20px 79px;
-            max-height: 55px;
+            padding: 0 20px 0 79px;
+            min-height: 55px;
+            display: flex;
+            align-items: center;
           }
         }
 
@@ -128,7 +122,7 @@
 
           .field-label,
           .pane-title {
-            color: #8f8f8f;
+            // color: #8f8f8f;
             font-weight: normal;
             font-size: 12px;
           }
@@ -210,15 +204,21 @@
       @include node-sprite(dataset);
     }
   }
+
+  .field-label-inline .field-items {
+    max-width: 100%;
+  }
+}
+
+.node-reg-assessment .col-md-9 .panel-panel-inner {
+  padding-bottom: 10px;
 }
 
 // Search results
 
 .node-teaser {
   background-color: #F9F9F9;
-  // border: 1px solid #FFF;
-  // margin: 1%;
-  padding: 15px 0 0 0;
+  padding: 15px 0;
   margin-bottom: 20px !important;
   position: relative;
 
@@ -238,11 +238,12 @@
     font-size: 16px;
     font-weight: bold;
     @include node-sprite(generic);
-    padding: 20px 20px 20px 79px;
-    max-height: 55px;
+    padding: 0 20px 0 79px;
     margin-left: 18px;
     margin-top: 0;
     min-height: 55px;
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width : $screen-sm) {
       font-size: 14px;
@@ -440,9 +441,13 @@
         .field {
           .field-label {
             font-weight: normal;
-            width: 130px;
-            display: inline-block;
-            margin-right: 10px;
+
+
+            @media (min-width: 450px) {
+              width: 130px;
+              display: inline-block;
+              margin-right: 10px;
+            }
           }
           .field-items {
             color: #606060;
