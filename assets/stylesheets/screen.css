@@ -3608,6 +3608,8 @@ body div.messages.error { background: #3d5d77; }
 
 #content { padding: 0; }
 
+.front.page-assessments .region-content h2 { display: none; }
+
 .thumbnail { display: block; padding: 10px; margin-bottom: 20px; line-height: 1.428571429; background-color: #FFF; border: none; border-radius: 0; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 2px; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 2px; }
 .thumbnail p { margin: 0; }
 .thumbnail .caption { text-align: center; background-color: #494949; text-transform: uppercase; font-weight: bold; color: white; padding-left: 0; padding-right: 0; }
