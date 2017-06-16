@@ -12,20 +12,32 @@
       cursor: pointer;
       position: relative;
       margin: 0;
-      padding: 15px 28px 15px 10px;
       color: $p-main;
       font-size: 14px;
       line-height: 1.3;
-      @extend .icon-arrow-down;
 
-      &:before {
-        font-family: 'unocha-icons' !important;
-        line-height: 1;
-        position: absolute;
-        right: 10px;
-        font-weight: bold;
-        margin-top: 2px;
+      button {
+        text-align: left;
+        background: none;
+        border: none;
+        -webkit-appearance: none;
+        width: 100%;
+        display: block;
+        @extend .icon-arrow-down;
+        position: relative;
+        padding: 15px 28px 15px 10px;
+
+        &:before {
+          font-family: 'unocha-icons' !important;
+          line-height: 1;
+          position: absolute;
+          right: 10px;
+          font-weight: bold;
+          margin-top: 2px;
+        }
       }
+
+
 
       &:hover, &:focus {
         background-color: $p-comp-variant;
@@ -39,7 +51,10 @@
 
     .content {
       padding: 0 10px 5px 10px;
-      display: none;
+
+      .js & {
+        display: none;
+      }
     }
 
     ul {
@@ -211,7 +226,7 @@
   }
 
   .block-current-search {
-    padding: 0;
+    padding: 0 0 10px 0;
     margin: 0 15px;
     background: $p-comp;
     color: $p-dark-text;
@@ -236,6 +251,59 @@
 
   h2 {
     display: none;
+  }
+
+}
+
+.js .show-facets-btn {
+  background: white;
+  text-transform: uppercase;
+  padding: 8px;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  border: none;
+
+  @extend .icon-arrow-down;
+
+  &:before {
+    font-family: 'unocha-icons' !important;
+    line-height: 1;
+    position: absolute;
+    margin: 2px 0px 0 94px;
+    font-weight: bold;
+  }
+
+  &.active {
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.js .facets-container {
+  height: auto;
+  max-height: 1000px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  &.mobile-hidden {
+    max-height: 0;
+
+  }
+}
+
+@media (min-width: 993px) {
+
+  .show-facets-btn {
+    display:  none;
+  }
+
+  .facets-container.mobile-hidden {
+    max-height: none;
+  }
+
+  #sidebar-first .block-current-search {
+    padding-bottom: 0;
   }
 
 }

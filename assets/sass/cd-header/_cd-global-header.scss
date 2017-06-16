@@ -127,15 +127,16 @@
 
 #block-system-user-menu {
   .btn {
-    width: 60px;
+    width: 80px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    padding-right: 20px;
 
     .caret {
       position: absolute;
       right: $cd-base-unit;
-      top: ($cd-base-unit * 2) + 2;
+      top: 15px;
     }
   }
 }
@@ -168,6 +169,7 @@
   #block-system-user-menu {
     .btn {
       width: auto;
+      padding-right: $cd-base-unit;
 
       .caret {
         position: relative;
