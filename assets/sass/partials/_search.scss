@@ -37,15 +37,16 @@
         }
       }
 
-
-
       &:hover, &:focus {
         background-color: $p-comp-variant;
       }
 
       &.opened {
-        @extend .icon-arrow-up;
         background-color: $p-comp-variant;
+
+        button {
+          @extend .icon-arrow-up;
+        }
       }
     }
 
@@ -294,11 +295,11 @@
 
 @media (min-width: 993px) {
 
-  .show-facets-btn {
+  .js .show-facets-btn {
     display:  none;
   }
 
-  .facets-container.mobile-hidden {
+  .js .facets-container.mobile-hidden {
     max-height: none;
   }
 

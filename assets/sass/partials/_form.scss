@@ -13,6 +13,10 @@ label {
 .chosen-container.form-control {
   height: 32px;
   line-height: 32px;
+
+  a {
+    border-bottom: none;
+  }
 }
 
 .chosen-container-multi .chosen-choices {

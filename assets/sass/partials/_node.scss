@@ -315,6 +315,7 @@
       background: url('../images/assessment-tb.svg') left top no-repeat;
       a {
         color: $p-main;
+        border-bottom: none;
       }
     }
     &:after {

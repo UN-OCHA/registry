@@ -3200,7 +3200,7 @@ html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-
 
 .icon-cccm:before { content: "\e901"; }
 
-.icon-arrow-up:before, #sidebar-first .block-facetapi h2.opened:before { content: "\e957"; }
+.icon-arrow-up:before, #sidebar-first .block-facetapi h2.opened button:before { content: "\e957"; }
 
 .icon-arrow-down:before, #sidebar-first .block-facetapi h2 button:before, .js .show-facets-btn:before, .fa-caret-down:before, .caret:before { content: "\e958"; }
 
@@ -3244,6 +3244,7 @@ label { display: block; }
 .chosen-container { max-width: 100%; }
 
 .chosen-container.form-control { height: 32px; line-height: 32px; }
+.chosen-container.form-control a { border-bottom: none; }
 
 .chosen-container-multi .chosen-choices { height: 100%; border-radius: 4px; background: #FFF; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); border-color: #CCC; padding: 1px 5px; }
 
@@ -3449,7 +3450,7 @@ div.region-top div.block { display: inline-block; }
 .node-teaser.node-hr-contact h2 a { color: #a494d8; }
 .node-teaser.node-hr-contact:after { background-color: #a494d8; }
 .node-teaser.node-reg-assessment h2 { background: url("../images/assessment-tb.svg") left top no-repeat; }
-.node-teaser.node-reg-assessment h2 a { color: #3d5d77; }
+.node-teaser.node-reg-assessment h2 a { color: #3d5d77; border-bottom: none; }
 .node-teaser.node-reg-assessment:after { background-color: #3d5d77; }
 .node-teaser.node-hr-office h2 { background-position: 0 -440px; }
 .node-teaser.node-hr-dataset h2 { background-position: 0 -220px; }
@@ -3587,7 +3588,7 @@ a.btn.btn-default { color: #333; }
 
 p { margin: 0 0 20px; }
 
-.chosen-container.form-control { width: 793px; border: 0; background: none; padding: 0px 0px; height: 22px; }
+.chosen-container.form-control { width: 793px; border: 0; background: none; padding: 0; }
 
 body div.messages { border: 0; padding: 11px 15px; background-image: none; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; color: white; text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0; font-weight: bold; }
 body div.messages.status { background: #60b75a; }
@@ -3885,8 +3886,8 @@ body .region-branding input.form-text:focus { border-color: #3d5d77; }
 .js .facets-container { height: auto; max-height: 1000px; transition: all 0.3s ease; overflow: hidden; }
 .js .facets-container.mobile-hidden { max-height: 0; }
 
-@media (min-width: 993px) { .show-facets-btn { display: none; }
-  .facets-container.mobile-hidden { max-height: none; }
+@media (min-width: 993px) { .js .show-facets-btn { display: none; }
+  .js .facets-container.mobile-hidden { max-height: none; }
   #sidebar-first .block-current-search { padding-bottom: 0; } }
 #block-hr-layout-hr-layout-space-links .space-social-media div { display: inline-block; }
 
