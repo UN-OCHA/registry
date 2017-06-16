@@ -43,7 +43,7 @@
 
   }
 
-  // highlight first item in secondary nav  
+  // highlight first item in secondary nav
   .menu li {
     float: none;
 
@@ -84,7 +84,6 @@
     padding: 4px 15px;
     text-transform: uppercase;
     font-weight: bold;
-    min-width: 110px;
     text-align: center;
     color: $p-main;
     background: none;
@@ -94,6 +93,10 @@
     border: none;
     border-bottom: 1px solid $p-main;
     font-family: $font-family-sans-serif;
+
+    @media (min-width:768px) {
+      min-width: 110px;
+    }
 
     &.active, &:hover {
       border: none!important;
