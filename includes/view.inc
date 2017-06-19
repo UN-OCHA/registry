@@ -36,7 +36,7 @@ function registry_views_data_export_feed_icon($variables) {
     'alt' => $text,
     'title' => $text,
   ));
-  return '<li>' . l(t($text), $url, $url_options) . '</li>';
+  return '<li>' . l($text, $url, $url_options) . '</li>';
 }
 
 /**

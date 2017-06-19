@@ -32,7 +32,7 @@
   <div class="group-nav">
     <?php if (!empty($prev_url)) : ?>
     <div class="prev">
-      <?php print l(t('' . ($mini ? '' : ' ' . t('', array(), array('context' => 'date_nav')))), $prev_url, $prev_options); ?>
+      <?php print l('' . ($mini ? '' : ' ' . t('', array(), array('context' => 'date_nav'))), $prev_url, $prev_options); ?>
   </div>
     <?php endif; ?>
         <div class="title-nav"> <h3><?php print strip_tags($nav_title); ?></h3></div>
