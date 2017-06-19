@@ -66,6 +66,7 @@
       height: $cd-base-unit*6;
       align-items: center;
       border-bottom: none;
+      display: -webkit-box;
       display: -webkit-flex;
       display: flex;
 
@@ -113,6 +114,7 @@
 .#{$namespace}-nav--secondary.#{$namespace}-nav {
   position: relative;
   z-index: 99999;
+      display: -webkit-box;
   display: -webkit-flex;
   display: flex;
 
@@ -180,6 +182,7 @@
 @media (min-width: map-get($grid-breakpoints, lg)) {
 
   .#{$namespace}-nav {
+      display: -webkit-box;
     display: -webkit-flex;
 
     display: flex;
@@ -213,7 +216,7 @@
           background: $cd-primary-color;
         }
 
-        .no-flexbox, .no-flexboxlegacy & {
+        .no-flexbox & {
           height: auto;
           display: block;
           padding-top: 23px;
@@ -232,7 +235,7 @@
   }
 
   .#{$namespace}-nav--secondary {
-    .no-flexbox, .no-flexboxlegacy & {
+    .no-flexbox & {
       float: right;
     }
   }

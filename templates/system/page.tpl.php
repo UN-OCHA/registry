@@ -67,7 +67,7 @@
     <?php endif; ?>
   </div>
 
-  <div id="main-content">
+  <div id="main-content" role="main">
     <div id="main" class="main">
       <div class="container">
         <?php if ($messages): ?>
