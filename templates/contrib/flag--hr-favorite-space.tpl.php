@@ -2,8 +2,8 @@
 
 /**
  * @file
- * Default theme implementation to display a flag link, and a message after the action
- * is carried out.
+ * Default theme implementation to display a flag link, and a message after
+ * the action is carried out.
  *
  * Available variables:
  *
