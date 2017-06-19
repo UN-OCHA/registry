@@ -4,6 +4,9 @@
  * Theme and preprocess functions for panels and panes.
  */
 
+/**
+ * Implements hook_field__FIELDNAME().
+ */
 function registry_field__field_documents($variables) {
   $output = '';
 
@@ -37,7 +40,8 @@ function registry_field__field_documents($variables) {
 }
 
 /**
- * Change labels of panel panes in add content modal form
+ * Change labels of panel panes in add content modal form.
+ *
  * See http://atrium.registry.info/humanitarian_response/node/4506
  */
 function registry_preprocess_panels_add_content_modal(&$vars) {
@@ -46,7 +50,7 @@ function registry_preprocess_panels_add_content_modal(&$vars) {
     $pane['category'] = 'Additional features';
     $additional_features[$key] = $pane;
   }
-  foreach($vars['categories']['bean-pane']['content'] as $key => $pane) {
+  foreach ($vars['categories']['bean-pane']['content'] as $key => $pane) {
     $pane['category'] = 'Additional features';
     if ($pane['name'] == 'fts_visualization') {
       $pane['title'] = 'FTS Chart';
@@ -62,15 +66,15 @@ function registry_preprocess_panels_add_content_modal(&$vars) {
   }
   $vars['categories']['additional_features'] = array(
     'title' => 'Additional features',
-    'content' => $additional_features
+    'content' => $additional_features,
   );
   $pane = $vars['categories']['fielded-panes']['content']['Panels pane'];
   $pane['title'] = 'Free text';
   $vars['categories']['custom-content'] = array(
     'title' => 'Custom content',
     'content' => array(
-      'Free text' => $pane
-    )
+      'Free text' => $pane,
+    ),
   );
   unset($vars['categories']['fielded-panes']);
   unset($vars['categories']['bean-pane']);
@@ -99,7 +103,13 @@ function registry_preprocess_panels_add_content_modal(&$vars) {
   $vars['root_content'] = '';
   if (!empty($vars['categories']['root'])) {
     foreach ($vars['categories']['root']['content'] as $content_type) {
-      $vars['root_content'] .= theme('panels_add_content_link', array('renderer' => $vars['renderer'], 'region' => $vars['region'], 'content_type' => $content_type));
+      $vars['root_content'] .= theme('panels_add_content_link',
+        array(
+          'renderer' => $vars['renderer'],
+          'region' => $vars['region'],
+          'content_type' => $content_type,
+        )
+      );
     }
   }
 }

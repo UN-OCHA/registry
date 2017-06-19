@@ -22,14 +22,11 @@
  * the view is modified.
  */
 ?>
-<?php 
-if (strpos($output, 'FREQ=WEEKLY') !== FALSE) {
+<?php
+if (strpos($output, 'FREQ=WEEKLY') !== FALSE):
   print '<span class="badge badge-rrule">W</span>';
-}
-elseif (strpos($output, 'FREQ=DAILY') !== FALSE) {
+elseif (strpos($output, 'FREQ=DAILY') !== FALSE):
   print '<span class="badge badge-rrule">D</span>';
-}
-elseif (strpos($output, 'FREQ=MONTHLY') !== FALSE) {
+elseif (strpos($output, 'FREQ=MONTHLY') !== FALSE):
   print '<span class="badge badge-rrule">M</span>';
-}
 ?>

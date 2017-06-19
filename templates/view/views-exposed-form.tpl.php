@@ -28,7 +28,7 @@
 <?php endif; ?>
 <div class="views-exposed-form">
   <div class="views-exposed-widgets clearfix">
-    <?php if (in_array('filter-search_api_views_fulltext', array_keys($widgets))) { ?>
+    <?php if (in_array('filter-search_api_views_fulltext', array_keys($widgets))): ?>
       <?php $widget = $widgets['filter-search_api_views_fulltext']; ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext form-group">
         <div class="input-group">
@@ -38,7 +38,7 @@
           </span>
         </div>
       </div>
-    <?php } else { ?>
+    <?php else: ?>
       <?php foreach ($widgets as $id => $widget): ?>
         <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
           <?php if (!empty($widget->label)): ?>
@@ -87,6 +87,6 @@
           <?php print $reset_button; ?>
         </div>
       <?php endif; ?>
-    <?php } ?>
+    <?php endif; ?>
   </div>
 </div>

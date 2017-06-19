@@ -4,6 +4,9 @@
  * Theme and preprocess functions for users.
  */
 
+/**
+ * Implements theme_preprocess_user_picture().
+ */
 function registry_preprocess_user_picture(&$variables) {
   template_preprocess_user_picture($variables);
   if (empty($variables['user_picture'])) {
@@ -13,7 +16,7 @@ function registry_preprocess_user_picture(&$variables) {
         'attributes' => array('title' => t('View user profile.')),
         'html' => TRUE,
       );
-      $variables['user_picture'] = l('<i class="fa fa-user fa-5x"></i>', 'user/'.$account->uid, $attributes);
+      $variables['user_picture'] = l('<i class="fa fa-user fa-5x"></i>', 'user/' . $account->uid, $attributes);
     }
     else {
       $variables['user_picture'] = '<i class="fa fa-user fa-5x"></i>';

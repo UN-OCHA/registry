@@ -7,7 +7,7 @@
  * @ingroup views_templates
  */
 ?>
-<div class="views-group hr-toolbox-<?php print strtolower($title); ?> <?php if ($title == 'Tools') { print 'hr-highlighted'; } ?>">
+<div class="views-group hr-toolbox-<?php print strtolower($title); ?> <?php if ($title == 'Tools'): print 'hr-highlighted'; endif; ?>">
 	<?php if (!empty($title)): ?>
 	  <h3 class="views-group-title"><?php print $title; ?></h3>
 	<?php endif; ?>
@@ -15,7 +15,7 @@
 		<div class="views-group-content">
 	<?php endif; ?>
 	<?php foreach ($rows as $id => $row): ?>
-	  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
+	  <div<?php if ($classes_array[$id]): print ' class="' . $classes_array[$id] . '"'; endif; ?>>
 	    <?php print $row; ?>
 	  </div>
 	<?php endforeach; ?>

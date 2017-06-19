@@ -11,11 +11,20 @@ function registry_preprocess_views_view(&$variables) {
   $variables['feed_icons'] = drupal_get_feeds();
 }
 
+/**
+ * Implements hook_feed_icon().
+ */
 function registry_feed_icon($variables) {
   $text = t('Subscribe to !feed-title', array('!feed-title' => $variables['title']));
-  return l('<i class="fa fa-rss-square fa-lg"></i>', $variables['url'], array('html' => TRUE, 'attributes' => array('class' => array('feed-icon'), 'title' => $text)));
+  return l('<i class="fa fa-rss-square fa-lg"></i>', $variables['url'], array(
+    'html' => TRUE,
+    'attributes' => array('class' => array('feed-icon'), 'title' => $text)
+  ));
 }
 
+/**
+ * Implements hook_views_data_export_feed_icon().
+ */
 function registry_views_data_export_feed_icon($variables) {
   extract($variables, EXTR_SKIP);
   $url_options = array('html' => TRUE);
@@ -23,7 +32,7 @@ function registry_views_data_export_feed_icon($variables) {
     $url_options['query'] = $query;
   }
   $image = theme('image', array('path' => $image_path, 'alt' => $text, 'title' => $text));
-  return '<li>'.l($text, $url, $url_options).'</li>';
+  return '<li>' . l(t($text), $url, $url_options) . '</li>';
 }
 
 /**
@@ -33,7 +42,7 @@ function registry_views_pdf_icon($vars) {
   $title = $vars['title'];
   $path = $vars['path'];
   $options = $vars['options'];
-  return '<li>'.l('PDF', $path, $options).'</li>';
+  return '<li>' . l(t('PDF'), $path, $options) . '</li>';
 }
 
 /**
@@ -43,7 +52,7 @@ function registry_date_ical_icon($variables) {
   if (empty($variables['tooltip'])) {
     $variables['tooltip'] = t('Add this event to my calendar');
   }
-  return '<li>'.l('ICAL', $variables['url']).'</li>';
+  return '<li>' . l(t('ICAL'), $variables['url']) . '</li>';
 }
 
 /**
@@ -62,7 +71,7 @@ function _registry_views_get_facet_path($real_field, $value) {
     $args['segment'] = &$segment;
     facetapi_pretty_paths_coder_callback('encodePathSegment', $args);
     if (!empty($args['segment']['value'])) {
-      return $args['segment']['alias'].'/'.$args['segment']['value'];
+      return $args['segment']['alias'] . '/' . $args['segment']['value'];
     }
   }
 
@@ -76,7 +85,7 @@ function _registry_views_more_path($type, $display, $view) {
     $val = $view['view']->filter[$key]->{'value'};
     if (!empty($val) && isset($val[0])) {
       if ($key == 'og_group_ref_target_id' || $key == 'field_bundles_target_id_entityreference_filter') {
-        $path = 'node/'.$val[0].'/'.$type;
+        $path = 'node/' . $val[0] . '/' . $type;
         if ($type == 'events') {
           $path .= '/list';
         }
@@ -84,40 +93,54 @@ function _registry_views_more_path($type, $display, $view) {
       elseif ($key != 'type' && $key != 'status' && $key != 'date_filter') {
         $segment = _registry_views_get_facet_path($view['view']->filter[$key]->real_field, $val[0]);
         if (!empty($segment)) {
-          $path .= '/'.$segment;
+          $path .= '/' . $segment;
         }
       }
     }
   }
-  return '<div class="more-link">'.l(t('view more'), $path).'</div>';
+  return '<div class="more-link">' . l(t('view more'), $path) . '</div>';
 }
 
 /**
- * More links
+ * More links for documents.
  */
 function registry_views_more__hr_documents_panes__list($view) {
   return _registry_views_more_path('documents', 'list', $view);
 }
 
+/**
+ * More links for infographics.
+ */
 function registry_views_more__hr_infographics_panes__list($view) {
   return _registry_views_more_path('infographics', 'list', $view);
 }
 
+/**
+ * More links for news.
+ */
 function registry_views_more__hr_news_panes__list($view) {
   return _registry_views_more_path('blog', 'list', $view);
 }
 
+/**
+ * More links for upcoming events.
+ */
 function registry_views_more__hr_events_panes__upcoming($view) {
   return _registry_views_more_path('events', 'upcoming', $view);
 }
 
+/**
+ * More links for assessments panes.
+ */
 function registry_views_more__hr_assessments_panes__list($view) {
   return _registry_views_more_path('assessments', 'list', $view);
 }
 
 /**
  * Preprocess function for Date pager template.
- * Override the pager for the printable calendar. See http://atrium.registry.info/humanitarian_response/node/4466
+ *
+ * Override the pager for the printable calendar.
+ * See http://atrium.registry.info/humanitarian_response/node/4466.
  */
 function registry_preprocess_date_views_pager(&$vars) {
   global $language;
@@ -129,7 +152,10 @@ function registry_preprocess_date_views_pager(&$vars) {
       if ($language->language != 'en') {
         $format = 'd F Y';
       }
-      $title = t('@mindate to @maxdate', array('@mindate' => date_format_date($date_info->min_date, 'custom', $format), '@maxdate' => date_format_date($date_info->max_date, 'custom', $format)));
+      $title = t('@mindate to @maxdate', array(
+        '@mindate' => date_format_date($date_info->min_date, 'custom', $format),
+        '@maxdate' => date_format_date($date_info->max_date, 'custom', $format),
+      ));
       $vars['nav_title'] = $title;
       $vars['prev_url'] = '';
       $vars['next_url'] = '';
@@ -144,4 +170,3 @@ function registry_preprocess_date_views_pager(&$vars) {
     }
   }
 }
-

@@ -2,15 +2,15 @@
 
 /**
  * @file
- * Default theme implementation to display a flag link, and a message after the action
- * is carried out.
+ * Default theme implementation to display a flag link, and a message after the
+ * action is carried out.
  *
  * Available variables:
  *
  * - $flag: The flag object itself. You will only need to use it when the
  *   following variables don't suffice.
- * - $flag_name_css: The flag name, with all "_" replaced with "-". For use in 'class'
- *   attributes.
+ * - $flag_name_css: The flag name, with all "_" replaced with "-". For use in
+ * 'class' attributes.
  * - $flag_classes: A space-separated list of CSS classes that should be applied to the link.
  *
  * - $action: The action the link is about to carry out, either "flag" or "unflag".
@@ -57,4 +57,3 @@
 <?php if ($needs_wrapping_element): ?>
   </div>
 <?php endif; ?>
-

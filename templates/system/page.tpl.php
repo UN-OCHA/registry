@@ -82,11 +82,13 @@
           </aside>
         <?php endif; ?>
         <div id="content-wrapper"
-          <?php if(!empty($page['sidebar_first'])) {
-            print 'class="col-md-9"';
-          } else {
-            print 'class="col-xs-12"';
-          } ?>
+          <?php
+            if(!empty($page['sidebar_first'])):
+              print 'class="col-md-9"';
+            else:
+              print 'class="col-xs-12"';
+            endif;
+          ?>
         >
           <div id="page-header">
             <?php if ($title): ?>

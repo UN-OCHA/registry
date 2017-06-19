@@ -4,7 +4,7 @@
  * Template file for the example display.
  *
  * Variables available:
- * 
+ *
  * $plugin: The pager plugin object. This contains the view.
  *
  * $plugin->view
@@ -27,12 +27,12 @@
  *   be used in the l() function, including rel=nofollow.
  */
 ?>
-<?php if (!empty($pager_prefix)) print $pager_prefix; ?>
-<div class="date-nav-wrapper clearfix<?php if (!empty($extra_classes)) print $extra_classes; ?>">
+<?php if (!empty($pager_prefix)): print $pager_prefix; endif; ?>
+<div class="date-nav-wrapper clearfix<?php if (!empty($extra_classes)): print $extra_classes; endif; ?>">
   <div class="group-nav">
     <?php if (!empty($prev_url)) : ?>
     <div class="prev">
-      <?php print l('' . ($mini ? '' : ' ' . t('', array(), array('context' => 'date_nav'))), $prev_url, $prev_options); ?>
+      <?php print l(t('' . ($mini ? '' : ' ' . t('', array(), array('context' => 'date_nav')))), $prev_url, $prev_options); ?>
   </div>
     <?php endif; ?>
         <div class="title-nav"> <h3><?php print strip_tags($nav_title); ?></h3></div>
