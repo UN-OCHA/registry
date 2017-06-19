@@ -56,11 +56,13 @@ function registry_preprocess_page(&$variables) {
           $region_status = $region->field_operation_status[LANGUAGE_NONE][0]['value'];
           switch ($region_status) {
             case 'active':
-              // Add the region to the tabs
+              // Add the region to the tabs.
               $variables['hr_tabs'][] = l($region->title, $region_uri['path'], $region_uri['options']);
               break;
+
             case 'inactive':
               break;
+
             case 'archived':
               break;
           }
@@ -73,7 +75,7 @@ function registry_preprocess_page(&$variables) {
         }
       }
       elseif ($og_group->type == 'hr_bundle') {
-        // Get operation from bundle
+        // Get operation from bundle.
         $op_gid = _hr_bundles_get_operation($og_group->nid);
         if (!empty($op_gid)) {
           $operation = entity_load_single('node', $op_gid);
@@ -82,13 +84,14 @@ function registry_preprocess_page(&$variables) {
         }
       }
       $uri = entity_uri('node', $og_group);
-      if ($og_group->status) { // Group is published
+      if ($og_group->status) {
+        // Group is published.
         $variables['hr_tabs'][] = l($og_group->title, $uri['path'], $uri['options']);
       }
       else {
         $variables['hr_tabs'][] = '<a href="#">' . $og_group->title . '</a>';
       }
-      $group_img_path = '/assets/images/headers/' . $og_group->type . '/' . strtolower(str_replace(array(' ','/'), '-', $og_group->title)) . '.png';
+      $group_img_path = '/assets/images/headers/' . $og_group->type . '/' . strtolower(str_replace(array(' ', '/'), '-', $og_group->title)) . '.png';
       if (file_exists(dirname(__FILE__) . $group_img_path)) {
         $header_img_path = $theme_path . $group_img_path;
       }
@@ -105,8 +108,6 @@ function registry_preprocess_page(&$variables) {
     $variables['follow_us_link_title'] = t('Login to follow us');
     $variables['follow_us_link_status'] = 'flag';
   }
-
-
   $variables['hr_favorite_spaces'] = _registry_block_render('hr_bookmarks', 'hr_favorite_spaces');
 }
 
@@ -132,13 +133,16 @@ function registry_preprocess_fieldable_panels_pane(&$variables) {
   }
 }
 
+/**
+ * Implements theme_preprocess_html().
+ */
 function registry_preprocess_html(&$vars) {
   $apple = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() .'/apple-touch-icon.png',
+      'href' => base_path() . path_to_theme() . '/apple-touch-icon.png',
       'rel' => 'apple-touch-icon',
-      'sizes' => '180x180'
+      'sizes' => '180x180',
     ),
   );
   drupal_add_html_head($apple, 'apple-touch-icon');
@@ -146,10 +150,10 @@ function registry_preprocess_html(&$vars) {
   $fav_32 = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() .'/favicon-32x32.png',
+      'href' => base_path() . path_to_theme() . '/favicon-32x32.png',
       'rel' => 'icon',
       'sizes' => '32x32',
-      'type' => 'image/png'
+      'type' => 'image/png',
     ),
   );
   drupal_add_html_head($fav_32, 'favicon-32x32');
@@ -157,10 +161,10 @@ function registry_preprocess_html(&$vars) {
   $fav_16 = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() .'/favicon-16x16.png',
+      'href' => base_path() . path_to_theme() . '/favicon-16x16.png',
       'rel' => 'icon',
       'sizes' => '16x16',
-      'type' => 'image/png'
+      'type' => 'image/png',
     ),
   );
   drupal_add_html_head($fav_16, 'favicon-16x16');
@@ -168,18 +172,18 @@ function registry_preprocess_html(&$vars) {
   $manifest = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() .'/manifest.json',
-      'rel' => 'manifest'
+      'href' => base_path() . path_to_theme() . '/manifest.json',
+      'rel' => 'manifest',
     ),
   );
   drupal_add_html_head($manifest, 'manifest');
 
-   $safari_pinned_tab = array(
+  $safari_pinned_tab = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() .'/safari-pinned-tab.svg',
+      'href' => base_path() . path_to_theme() . '/safari-pinned-tab.svg',
       'rel' => 'mask-icon',
-      'color' => '#5bbad5'
+      'color' => '#5bbad5',
     ),
   );
   drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');

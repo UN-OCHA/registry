@@ -95,7 +95,7 @@ function registry_menu_link($variables) {
     // Wrap in dropdown-menu.
     unset($element['#below']['#theme_wrappers']);
     $item_id = registry_menu_unique_id();
-    $sub_menu = '<ul class="collapse in" id="'.$item_id.'">' . drupal_render($element['#below']) . '</ul>';
+    $sub_menu = '<ul class="collapse in" id="' . $item_id . '">' . drupal_render($element['#below']) . '</ul>';
 
     // Check if element is nested.
     if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {

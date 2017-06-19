@@ -31,14 +31,23 @@ function registry_views_view_field__hr_documents__table__field_files_collection(
   return $output;
 }
 
+/**
+ * Implements theme_views_view_field().
+ */
 function registry_views_view_field__hr_documents__global_table__field_files_collection($variables) {
   return registry_views_view_field__hr_documents__table__field_files_collection($variables);
 }
 
+/**
+ * Implements theme_views_view_field().
+ */
 function registry_views_view_field__hr_infographics__table__field_files_collection($variables) {
   return registry_views_view_field__hr_documents__table__field_files_collection($variables);
 }
 
+/**
+ * Implements theme_views_view_field().
+ */
 function registry_views_view_field__hr_infographics__global_table__field_files_collection($variables) {
   return registry_views_view_field__hr_documents__table__field_files_collection($variables);
 }

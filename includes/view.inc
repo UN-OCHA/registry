@@ -18,7 +18,7 @@ function registry_feed_icon($variables) {
   $text = t('Subscribe to !feed-title', array('!feed-title' => $variables['title']));
   return l('<i class="fa fa-rss-square fa-lg"></i>', $variables['url'], array(
     'html' => TRUE,
-    'attributes' => array('class' => array('feed-icon'), 'title' => $text)
+    'attributes' => array('class' => array('feed-icon'), 'title' => $text),
   ));
 }
 
@@ -31,7 +31,11 @@ function registry_views_data_export_feed_icon($variables) {
   if ($query) {
     $url_options['query'] = $query;
   }
-  $image = theme('image', array('path' => $image_path, 'alt' => $text, 'title' => $text));
+  $image = theme('image', array(
+    'path' => $image_path,
+    'alt' => $text,
+    'title' => $text,
+  ));
   return '<li>' . l(t($text), $url, $url_options) . '</li>';
 }
 
@@ -46,7 +50,7 @@ function registry_views_pdf_icon($vars) {
 }
 
 /**
- * Theme function for ical icon
+ * Theme function for ical icon.
  */
 function registry_date_ical_icon($variables) {
   if (empty($variables['tooltip'])) {
@@ -56,7 +60,7 @@ function registry_date_ical_icon($variables) {
 }
 
 /**
- * Returns the facet path for a specific field and value
+ * Returns the facet path for a specific field and value.
  */
 function _registry_views_get_facet_path($real_field, $value) {
   $adapter = facetapi_adapter_load('search_api@default_node_index');
@@ -78,6 +82,9 @@ function _registry_views_get_facet_path($real_field, $value) {
   return FALSE;
 }
 
+/**
+ * Views more path.
+ */
 function _registry_views_more_path($type, $display, $view) {
   $path = $type;
   $filter_keys = array_keys($view['view']->display[$display]->display_options['filters']);
