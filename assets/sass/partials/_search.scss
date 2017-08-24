@@ -16,25 +16,23 @@
       font-size: 14px;
       line-height: 1.3;
 
-      button {
-        text-align: left;
-        background: none;
-        border: none;
-        -webkit-appearance: none;
-        width: 100%;
-        display: block;
-        @extend .icon-arrow-down;
-        position: relative;
-        padding: 15px 28px 15px 10px;
+      text-align: left;
+      background: none;
+      border: none;
+      -webkit-appearance: none;
+      width: 100%;
+      display: block;
+      @extend .icon-arrow-down;
+      position: relative;
+      padding: 15px 28px 15px 10px;
 
-        &:before {
-          font-family: 'unocha-icons' !important;
-          line-height: 1;
-          position: absolute;
-          right: 10px;
-          font-weight: bold;
-          margin-top: 2px;
-        }
+      &:before {
+        font-family: 'unocha-icons' !important;
+        line-height: 1;
+        position: absolute;
+        right: 10px;
+        font-weight: bold;
+        margin-top: 2px;
       }
 
       &:hover, &:focus {
@@ -44,9 +42,7 @@
       &.opened {
         background-color: $p-comp-variant;
 
-        button {
-          @extend .icon-arrow-up;
-        }
+        @extend .icon-arrow-up;
       }
     }
 

@@ -3200,9 +3200,9 @@ html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-
 
 .icon-cccm:before { content: "\e901"; }
 
-.icon-arrow-up:before, #sidebar-first .block-facetapi h4.opened button:before { content: "\e957"; }
+.icon-arrow-up:before, #sidebar-first .block-facetapi h4.opened:before { content: "\e957"; }
 
-.icon-arrow-down:before, #sidebar-first .block-facetapi h4 button:before, .js .show-facets-btn:before, .fa-caret-down:before, .caret:before { content: "\e958"; }
+.icon-arrow-down:before, #sidebar-first .block-facetapi h4:before, .js .show-facets-btn:before, .fa-caret-down:before, .caret:before { content: "\e958"; }
 
 .icon-user:before { content: "\e955"; }
 
@@ -3841,9 +3841,8 @@ body .region-branding input.form-text:focus { border-color: #3d5d77; }
   .no-flexbox .icons-list a { padding: 30px 30px 30px 70px; height: auto; }
   .icons-list a [class^="icon-"], .icons-list a [class*=" icon-"] { top: 25px; } }
 #sidebar-first .block-facetapi { padding: 0; background: white; border-bottom: 1px solid #d8d8d8; margin: 0 15px; }
-#sidebar-first .block-facetapi h4 { color: black; cursor: pointer; position: relative; margin: 0; color: #3d5d77; font-size: 14px; line-height: 1.3; }
-#sidebar-first .block-facetapi h4 button { text-align: left; background: none; border: none; -webkit-appearance: none; width: 100%; display: block; position: relative; padding: 15px 28px 15px 10px; }
-#sidebar-first .block-facetapi h4 button:before { font-family: 'unocha-icons' !important; line-height: 1; position: absolute; right: 10px; font-weight: bold; margin-top: 2px; }
+#sidebar-first .block-facetapi h4 { color: black; cursor: pointer; position: relative; margin: 0; color: #3d5d77; font-size: 14px; line-height: 1.3; text-align: left; background: none; border: none; -webkit-appearance: none; width: 100%; display: block; position: relative; padding: 15px 28px 15px 10px; }
+#sidebar-first .block-facetapi h4:before { font-family: 'unocha-icons' !important; line-height: 1; position: absolute; right: 10px; font-weight: bold; margin-top: 2px; }
 #sidebar-first .block-facetapi h4:hover, #sidebar-first .block-facetapi h4:focus { background-color: #dfedf1; }
 #sidebar-first .block-facetapi h4.opened { background-color: #dfedf1; }
 #sidebar-first .block-facetapi .block__content { padding: 0 10px 5px 10px; }
