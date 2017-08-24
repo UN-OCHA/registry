@@ -31,15 +31,15 @@
 		formatFilters();
 
 		//facets
-		$("#sidebar-first .block.block-facetapi").on("click", "h2", function() {
-			$(this).toggleClass('opened').next('.content').slideToggle('fast');
+		$("#sidebar-first .block.block-facetapi").on("click", "h4", function() {
+			$(this).toggleClass('opened').next('.block__content').slideToggle('fast');
 		});
 		if($("#sidebar-first .block.block-current-search .content .current-search-item-reset").length > 0) {
-			$("#sidebar-first .block.block-current-search .content .current-search-item-reset").appendTo('#sidebar-first .block.block-current-search .content');
+			$("#sidebar-first .block.block-current-search .block__content .current-search-item-reset").appendTo('#sidebar-first .block.block-current-search .block__content');
 		}
 
 		$("#sidebar-first .block.block-facetapi .facetapi-active").each(function() {
-			$(this).closest('.content').show().prev("h2").addClass("opened");
+			$(this).closest('.content').show().prev("h4").addClass("opened");
 			$(this).parent().addClass('redactive');
 		});
 

@@ -66,10 +66,10 @@
 }
 
 // Hide titles of menu blocks
-.block-menu h2,
-.block-menu-block h2,
-.block-og-menu h2,
-.block-locale h2 {
+.block-menu h4,
+.block-menu-block h4,
+.block-og-menu h4,
+.block-locale h4 {
   display: none;
 }
 
@@ -471,7 +471,7 @@
     margin: 0;
     background-color: transparent;
 
-    h2 {
+    h4 {
       margin: 9px 0;
       font-size: 15px;
       font-weight: normal;
