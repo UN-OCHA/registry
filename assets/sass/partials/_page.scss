@@ -195,6 +195,19 @@ body div.messages {
   background-color: $p-main;
   color: white;
 
+  .block-menu li {
+    display: inline-block;
+  }
+
+  .block-menu li a {
+    color: white;
+  }
+
+  .block-menu li a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+  }
+
   @media screen and (max-width: $screen-md) {
     height: auto;
   }
@@ -667,6 +680,3 @@ body .region-branding {
     content: attr(data-title);
   }
 }
-
-
-

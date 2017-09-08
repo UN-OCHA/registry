@@ -3106,7 +3106,7 @@ form .description { margin: 2px 0; color: #555555; }
 
 .media-widget > a { margin: 0 10px 0 0; display: inline-block; }
 
-html.js input.form-autocomplete { background: url('../images/throbber.gif?1503565421') no-repeat right 8px #fff !important; }
+html.js input.form-autocomplete { background: url('../images/throbber.gif?1499245589') no-repeat right 8px #fff !important; }
 html.js input.throbbing { background-position: right -122px !important; }
 html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-width: 1px; }
 
@@ -3619,6 +3619,9 @@ body div.messages.error { background: #3d5d77; }
 @media screen and (max-width: 1200px) { .thumbnail .caption { font-size: 10px; } }
 
 #footer { margin: 20px 0 0; background-color: #3d5d77; color: white; }
+#footer .block-menu li { display: inline-block; }
+#footer .block-menu li a { color: white; }
+#footer .block-menu li a:hover { text-decoration: underline; background-color: transparent; }
 @media screen and (max-width: 992px) { #footer { height: auto; } }
 #footer .container { padding-bottom: 20px; padding-top: 1em; }
 #footer .container #footer-second img { margin: 10px; max-width: 100%; max-height: 45px; }
