@@ -5,7 +5,7 @@
 @import "compass/utilities/sprites";
 @import "footer-logos/*.png";
 
-@include sticky-footer(120px);
+@include sticky-footer(150px);
 @include all-footer-logos-sprites;
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,

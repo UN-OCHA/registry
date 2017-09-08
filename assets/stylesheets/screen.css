@@ -3530,10 +3530,10 @@ div.region-top div.block { display: inline-block; }
 
 html, body { height: 100%; }
 
-#root { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -120px; }
-#root #root_footer { height: 120px; }
+#root { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -150px; }
+#root #root_footer { height: 150px; }
 
-#footer { clear: both; position: relative; height: 120px; }
+#footer { clear: both; position: relative; height: 150px; }
 
 .footer-logos-cap { background-position: 0 0; }
 
