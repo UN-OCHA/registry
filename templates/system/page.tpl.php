@@ -120,6 +120,11 @@
 
 <footer id="footer" class="footer hidden-print" role="contentinfo">
   <div class="container">
+    <?php if (!empty($page['footer'])): ?>
+    <div class="col-md-12">
+      <?php print render($page['footer']); ?>
+    </div>
+    <?php endif; ?>
     <div id="footer-first" class="col-md-5">
       <p><?php print t('Service provided by'); ?><a href="http://www.unocha.org" target="_blank"><img width="200" alt="OCHA logo" src="/sites/all/themes/registry/assets/images/OCHA-logoWhite-22.svg"></a></p>
     </div>
