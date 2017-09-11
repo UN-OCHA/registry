@@ -199,6 +199,10 @@ body div.messages {
     display: inline-block;
   }
 
+  .block-menu li.first {
+    margin-left: -15px;
+  }
+
   .block-menu li a {
     color: white;
   }

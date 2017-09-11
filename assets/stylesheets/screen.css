@@ -3620,6 +3620,7 @@ body div.messages.error { background: #3d5d77; }
 
 #footer { margin: 20px 0 0; background-color: #3d5d77; color: white; }
 #footer .block-menu li { display: inline-block; }
+#footer .block-menu li.first { margin-left: -15px; }
 #footer .block-menu li a { color: white; }
 #footer .block-menu li a:hover { text-decoration: underline; background-color: transparent; }
 @media screen and (max-width: 992px) { #footer { height: auto; } }
