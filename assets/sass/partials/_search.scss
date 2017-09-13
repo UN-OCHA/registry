@@ -149,8 +149,6 @@
   .current-reset-filter {
 
     a {
-      position: relative;
-      padding-left: 15px;
       color: $p-dark-text;
 
       @extend .icon-cancel;
@@ -159,13 +157,9 @@
         font-family: 'unocha-icons' !important;
         line-height: 1;
         font-weight: bold;
-        position: absolute;
-        left: 0;
-        top: 2px;
       }
 
       &:after {
-        content: "reset all";
         font-size: 12px;
       }
 
@@ -176,22 +170,12 @@
     }
 
     span {
-      position: absolute;
-      left: -9999999px;
+      font-size: 10px;
     }
 
     i {
       display: none;
     }
-  }
-
-  .current-search-item-reset {
-    position: absolute;
-    top: 18px;
-    right: 25px;
-    height: 16px;
-    width: 56px;
-    overflow: hidden;
   }
 
   .current-selected-item {
