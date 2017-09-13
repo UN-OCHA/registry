@@ -22,6 +22,7 @@
           <ul class="cd-hri-dropdown-menu dropdown-menu" role="menu" id="cd-hri-related-platforms" aria-hidden="true" aria-labelledby="cd-hri-related-platforms-toggle">
             <li><a href="https://fts.unocha.org/">Financial Tracking Service</a></li>
             <li><a href="https://humdata.org/">Humanitarian Data Exchange</a></li>
+            <li><a href="https://www.humanitarianresponse.info">Humanitarian Response</a></li>
             <li><a href="https://humanitarian.id/">Humanitarian ID</a></li>
             <li><a href="https://reliefweb.int/">ReliefWeb</a></li>
           </ul>
